@@ -1,39 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\TargetFrameworks.props" />
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
+    <TargetFramework>net472</TargetFramework>
+    <ProductVersion>8.1.0</ProductVersion>
     <ProjectGuid>{410A7DC9-E7DA-43E6-B592-93E2A344B660}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>Mono.Addins.GuiGtk3</RootNamespace>
     <AssemblyName>Mono.Addins.GuiGtk3</AssemblyName>
     <SignAssembly>True</SignAssembly>
     <AssemblyOriginatorKeyFile>..\mono-addins.snk</AssemblyOriginatorKeyFile>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>True</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>..\bin</OutputPath>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
-    <ConsolePause>False</ConsolePause>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>True</Optimize>
     <OutputPath>..\bin</OutputPath>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
-    <ConsolePause>False</ConsolePause>
-    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
-    <DebugSymbols>true</DebugSymbols>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -46,26 +24,6 @@
     <Reference Include="cairo-sharp, Version=1.10.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756" />
     <Reference Include="Mono.Posix" />
     <Reference Include="gio-sharp, Version=3.0.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="Mono.Addins.Gui\AddinInfoView.cs" />
-    <Compile Include="Mono.Addins.Gui\AddinInstaller.cs" />
-    <Compile Include="Mono.Addins.Gui\AddinInstallerDialog.cs" />
-    <Compile Include="Mono.Addins.Gui\AddinManagerDialog.cs" />
-    <Compile Include="Mono.Addins.Gui\AddinManagerWindow.cs" />
-    <Compile Include="Mono.Addins.Gui\AddinTreeWidget.cs" />
-    <Compile Include="Mono.Addins.Gui\ErrorDialog.cs" />
-    <Compile Include="Mono.Addins.Gui\HeaderBox.cs" />
-    <Compile Include="Mono.Addins.Gui\HoverImageButton.cs" />
-    <Compile Include="Mono.Addins.Gui\HslColor.cs" />
-    <Compile Include="Mono.Addins.Gui\InstallDialog.cs" />
-    <Compile Include="Mono.Addins.Gui\InstallMonitor.cs" />
-    <Compile Include="Mono.Addins.Gui\ManageSitesDialog.cs" />
-    <Compile Include="Mono.Addins.Gui\NewSiteDialog.cs" />
-    <Compile Include="Mono.Addins.Gui\ProgressDialog.cs" />
-    <Compile Include="Mono.Addins.Gui\SearchEntry.cs" />
-    <Compile Include="Mono.Addins.Gui\Services.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="icons\download-16.png">
@@ -381,7 +339,7 @@
       <LogicalName>Mono.Addins.GuiGtk3.interfaces.ErrorDialog.ui</LogicalName>
     </EmbeddedResource>
   </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+ 
   <ItemGroup>
     <ProjectReference Include="..\Mono.Addins.Setup\Mono.Addins.Setup.csproj">
       <Project>{A85C9721-C054-4BD8-A1F3-0227615F0A36}</Project>
