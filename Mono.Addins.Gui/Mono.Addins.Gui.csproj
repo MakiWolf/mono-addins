@@ -13,12 +13,16 @@
     <AssemblyOriginatorKeyFile>..\mono-addins.snk</AssemblyOriginatorKeyFile>
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+     <OutputPath>bin\test</OutputPath>
+     <RuntimeIdentifier>win</RuntimeIdentifier>
+     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>True</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>..\bin\net472</OutputPath>
+     <RuntimeIdentifier>win</RuntimeIdentifier>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
